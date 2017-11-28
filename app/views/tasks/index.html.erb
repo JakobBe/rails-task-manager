@@ -1,0 +1,14 @@
+<h1>These are all your tasks</h1>
+
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <h3> <%= link_to task.name, task_path(task) %> </h3>
+    <p> <%= task.description %> </p>
+    <h5> <%= task.deadline %> </h5>
+    <p> <%= task.mark %> </p>
+
+  </li>
+  <% end  %>
+</ul>
