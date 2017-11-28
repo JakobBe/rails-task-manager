@@ -8,7 +8,12 @@
     <p> <%= task.description %> </p>
     <h5> <%= task.deadline %> </h5>
     <p> <%= task.mark %> </p>
+    <p> <%= link_to "Update the task" , edit_path(task) %> </p>
+    <%= link_to "Delete the task" , task_path(task), method: :delete %>
 
   </li>
   <% end  %>
 </ul>
+
+
+<h2> <%= link_to "Create a new task", task_new_path %> </h2>
